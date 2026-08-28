@@ -26,6 +26,17 @@ A simulated enterprise ransomware incident involving phishing-delivered malware,
 
 Hands-on PKI and TLS troubleshooting lab reproducing and diagnosing certificate trust failures, hostname mismatches, expired certificates, incomplete certificate chains, TLS protocol mismatches, and cipher-suite mismatches using OpenSSL and curl.
 
+**Skills demonstrated:**
+
+- PKI and certificate-chain analysis
+- TLS and HTTPS troubleshooting
+- OpenSSL and curl
+- Certificate trust validation
+- Hostname and SAN verification
+- Expired certificate diagnosis
+- Intermediate CA troubleshooting
+- TLS protocol and cipher analysis
+
 [View Project](pki-tls-troubleshooting/)
 
 ## Planned Projects
