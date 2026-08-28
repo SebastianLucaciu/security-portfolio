@@ -1,5 +1,7 @@
 # Secrets & Dependency Scanning
 
+[![Security Scan](https://github.com/SebastianLucaciu/security-portfolio/actions/workflows/security-scan.yml/badge.svg)](https://github.com/SebastianLucaciu/security-portfolio/actions/workflows/security-scan.yml)
+
 ## Overview
 
 This project demonstrates how hard-coded secrets and vulnerable software dependencies can be detected and remediated before reaching production.
