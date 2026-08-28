@@ -6,7 +6,7 @@ This portfolio is designed to demonstrate practical security thinking through do
 
 ## Projects
 
-### 01 — Ransomware Incident Response Runbook
+### Ransomware Incident Response Runbook
 
 A simulated enterprise ransomware incident involving phishing-delivered malware, suspicious PowerShell execution, abnormal SMB activity, and encryption of business-critical shared data.
 
@@ -20,7 +20,7 @@ A simulated enterprise ransomware incident involving phishing-delivered malware,
 - SMB and network troubleshooting
 - Risk and severity assessment
 
-[View Project](01-ransomware-ir-runbook/)
+[View Project](ransomware-ir-runbook/)
 
 ## Planned Projects
 
