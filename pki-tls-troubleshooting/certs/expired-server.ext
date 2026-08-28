@@ -1,0 +1,3 @@
+subjectAltName = DNS:expired.securitylab.local
+extendedKeyUsage = serverAuth
+keyUsage = digitalSignature, keyEncipherment

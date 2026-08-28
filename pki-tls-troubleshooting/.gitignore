@@ -1,0 +1,5 @@
+# Private keys
+*.key
+
+# OpenSSL serial files
+*.srl

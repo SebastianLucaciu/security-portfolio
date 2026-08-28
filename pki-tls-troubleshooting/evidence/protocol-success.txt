@@ -1,0 +1,84 @@
+Connecting to 127.0.0.1
+depth=1 C=RO, ST=Arad, L=Arad, O=Security Lab, CN=Security Lab Root CA
+verify return:1
+depth=0 C=RO, ST=Arad, L=Arad, O=Security Lab, CN=internal.securitylab.local
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C=RO, ST=Arad, L=Arad, O=Security Lab, CN=internal.securitylab.local
+   i:C=RO, ST=Arad, L=Arad, O=Security Lab, CN=Security Lab Root CA
+   a:PKEY: RSA, 2048 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Aug 28 15:38:03 2026 GMT; NotAfter: Nov 30 15:38:03 2028 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIID4zCCAsugAwIBAgIUe4zwA1NeYpTfbBJx32OXkCXy5JUwDQYJKoZIhvcNAQEL
+BQAwYTELMAkGA1UEBhMCUk8xDTALBgNVBAgMBEFyYWQxDTALBgNVBAcMBEFyYWQx
+FTATBgNVBAoMDFNlY3VyaXR5IExhYjEdMBsGA1UEAwwUU2VjdXJpdHkgTGFiIFJv
+b3QgQ0EwHhcNMjYwODI4MTUzODAzWhcNMjgxMTMwMTUzODAzWjBnMQswCQYDVQQG
+EwJSTzENMAsGA1UECAwEQXJhZDENMAsGA1UEBwwEQXJhZDEVMBMGA1UECgwMU2Vj
+dXJpdHkgTGFiMSMwIQYDVQQDDBppbnRlcm5hbC5zZWN1cml0eWxhYi5sb2NhbDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALUeG6JtBHeDx94Jc+lSq2x/
+RZlB0qITjIyPQpV5YjzMs30x3lx1tD1Sbc3Ss4f08u4UUY61tehMCTx/smd1wlaI
+t5BhiPXvvbGXUjupHX7Qdv1OHjkHncxpObRobgPU6F2Hz5fyjWZWhtX3TC9DwXsl
+UUq/dBjpGNmw3TToBEEXZrqBqUe73Tsvwi+iaPlfkybL4i4AiMTkhEio3NJSyxIa
+Iic0rg60nOPsI3xD/iPMGVOQvzCJZB6JewQ8J+SoDzjjs0w/UW2jVN4TbLOxhUn8
+WrRrz/ziVw5BVPQvUfNotXWchcdR+FWuyBQVw8ChooEm2s2h1XhJbJ9i8pdapDkC
+AwEAAaOBjDCBiTAlBgNVHREEHjAcghppbnRlcm5hbC5zZWN1cml0eWxhYi5sb2Nh
+bDATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwHQYDVR0OBBYEFH84
+ZiBvyYH/Sr6jy5STcuWb1fGLMB8GA1UdIwQYMBaAFFaULsUCM6u9ClYmGR4AAeNs
+69e2MA0GCSqGSIb3DQEBCwUAA4IBAQB9nqclxOa1OilIz6V9wOBC2JUPTqAOGd8o
+iV9/Xjya4IvNTL2/xIxOAHfsjMHa7bU9YRTYa1yvckvddFj3sb5GA0mT0Onki/DU
+0b8RGj0gT31iv4+6SdWaKNoQtDWgy379R5KiTCh6dCi6kN5ZeUMITo1orBOsEQFi
+wXB/RJMBsaTi059Ap4m0Uw8cI/hqO/lLizwlXoy774WdxwtNi4UM9oC9Je3LskQr
+ymD1gwChM9YBBoIZDUOYpYjuvlUG5ym9LtltAn1EKlGvv7ddsz8BPcaFbcVXbXAj
++ZGBimbtPbVEZisgoZk6JwtoZYStdX6jAVJwaROb6yUvy/C/H0Kp
+-----END CERTIFICATE-----
+subject=C=RO, ST=Arad, L=Arad, O=Security Lab, CN=internal.securitylab.local
+issuer=C=RO, ST=Arad, L=Arad, O=Security Lab, CN=Security Lab Root CA
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Peer Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1638 bytes and written 317 bytes
+Verification: OK
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Protocol: TLSv1.2
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 554D2049AF560AB09AE1AEB83D8D46B7A28E6B07ADED665165C0287975B4D07C
+    Session-ID-ctx:
+    Master-Key: 2AEC6EEA39A6888733C35F336370AAE79D3550D957C077CC21D794017A596A334B715179569AA04A6D408FC5FC253BA5
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 54 82 fa 13 81 79 45 54-3c 89 11 81 be fb 98 bd   T....yET<.......
+    0010 - 99 60 95 af d0 04 51 7f-0e 8f fb ce 63 13 0d 8a   .`....Q.....c...
+    0020 - 35 67 e5 5e e1 02 16 5a-43 65 31 ab 62 5a 90 63   5g.^...ZCe1.bZ.c
+    0030 - 6b 2b 94 7d 88 74 64 b7-0e 9d 5f 13 67 00 81 2a   k+.}.td..._.g..*
+    0040 - 2c 97 69 0b 64 a4 b9 39-e7 88 ef 29 20 39 c8 55   ,.i.d..9...) 9.U
+    0050 - 92 db 1a 72 65 2f d4 eb-1e ea c3 12 50 96 ec f0   ...re/......P...
+    0060 - 88 5f 94 0f 58 db dc d9-16 be 74 82 4e aa 52 1d   ._..X.....t.N.R.
+    0070 - 8b d6 12 d4 84 09 73 ad-b1 c3 10 6a d2 44 c0 cc   ......s....j.D..
+    0080 - ca 66 11 f9 7f fa ed 30-de 1c 57 6d 37 a3 bc 24   .f.....0..Wm7..$
+    0090 - db a0 e7 9c 00 26 2e 37-68 ae e0 ec fe fd 51 e5   .....&.7h.....Q.
+    00a0 - 6f 7a 53 00 42 6e 0c 43-80 02 6f 4e a7 d9 ff c5   ozS.Bn.C..oN....
+
+    Start Time: 1787932404
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: yes
+---
+DONE

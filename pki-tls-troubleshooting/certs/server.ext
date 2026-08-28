@@ -1,0 +1,3 @@
+subjectAltName = DNS:internal.securitylab.local
+extendedKeyUsage = serverAuth
+keyUsage = digitalSignature, keyEncipherment

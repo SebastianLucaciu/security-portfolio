@@ -1,0 +1,3 @@
+C=RO, ST=Arad, L=Arad, O=Security Lab, CN=internal.securitylab.local
+error 20 at 0 depth lookup: unable to get local issuer certificate
+error certs/server.crt: verification failed

@@ -22,9 +22,14 @@ A simulated enterprise ransomware incident involving phishing-delivered malware,
 
 [View Project](ransomware-ir-runbook/)
 
+### PKI / TLS Troubleshooting Lab
+
+Hands-on PKI and TLS troubleshooting lab reproducing and diagnosing certificate trust failures, hostname mismatches, expired certificates, incomplete certificate chains, TLS protocol mismatches, and cipher-suite mismatches using OpenSSL and curl.
+
+[View Project](pki-tls-troubleshooting/)
+
 ## Planned Projects
 
-- PKI and TLS Troubleshooting Lab
 - Secrets and Dependency Scanning Pipeline
 - Container Vulnerability Scanning and Remediation
 - Threat Modeling with STRIDE

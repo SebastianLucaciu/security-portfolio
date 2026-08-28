@@ -1,0 +1,3 @@
+C=RO, ST=Arad, L=Arad, O=Security Lab, CN=expired.securitylab.local
+error 10 at 0 depth lookup: certificate has expired
+error certs/expired-server.crt: verification failed
