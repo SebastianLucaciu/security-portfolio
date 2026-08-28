@@ -31,7 +31,6 @@ The runbook uses a practical incident-response workflow while incorporating curr
 ## Project Contents
 
 - [`RUNBOOK.md`](RUNBOOK.md) — Full incident response runbook
-- [`diagrams/`](diagrams/) — Incident-response and decision-flow diagrams
 - [`evidence/`](evidence/) — Supporting scenario evidence and incident artifacts
 - [`evidence/scenario-timeline.md`](evidence/scenario-timeline.md) — Simulated incident timeline with evidence sources and response milestones
 ## Project Objective
