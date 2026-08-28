@@ -39,9 +39,25 @@ Hands-on PKI and TLS troubleshooting lab reproducing and diagnosing certificate 
 
 [View Project](pki-tls-troubleshooting/)
 
+### Secrets & Dependency Scanning
+
+DevSecOps lab demonstrating hard-coded secret detection, custom Gitleaks rules, dependency vulnerability scanning, remediation, and automated security checks with GitHub Actions.
+
+**Skills demonstrated:**
+
+- DevSecOps
+- Secret scanning
+- Gitleaks
+- Dependency vulnerability scanning
+- pip-audit
+- GitHub Actions
+- CI security controls
+- Vulnerability remediation
+
+[View Project](secrets-dependency-scanning/)
+
 ## Planned Projects
 
-- Secrets and Dependency Scanning Pipeline
 - Container Vulnerability Scanning and Remediation
 - Threat Modeling with STRIDE
 - Security Log Analysis

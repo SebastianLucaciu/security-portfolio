@@ -1,0 +1,7 @@
+title = "Security Portfolio Secret Scanning Rules"
+
+[[rules]]
+id = "security-lab-api-key"
+description = "Detect hard-coded Security Lab API keys"
+regex = '''sk_test_FAKE_[A-Za-z0-9]+'''
+keywords = ["sk_test_FAKE_"]

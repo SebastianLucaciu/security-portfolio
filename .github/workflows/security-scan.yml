@@ -1,0 +1,38 @@
+name: Security Scan
+
+on:
+  push:
+    paths:
+      - "secrets-dependency-scanning/**"
+  pull_request:
+    paths:
+      - "secrets-dependency-scanning/**"
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: secrets-dependency-scanning
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pip-audit
+        run: python -m pip install pip-audit
+
+      - name: Scan dependencies
+        run: pip-audit -r app/requirements.txt
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: secrets-dependency-scanning/.gitleaks.toml
