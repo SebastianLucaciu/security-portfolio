@@ -1,0 +1,35 @@
+name: Container Security Scan
+
+on:
+  push:
+    paths:
+      - "container-vulnerability-remediation/**"
+      - ".github/workflows/container-security-scan.yml"
+  pull_request:
+    paths:
+      - "container-vulnerability-remediation/**"
+      - ".github/workflows/container-security-scan.yml"
+
+jobs:
+  container-security:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build hardened container
+        run: |
+          docker build \
+            -t container-security-lab:hardened \
+            container-vulnerability-remediation
+
+      - name: Scan container with Trivy
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: "container-security-lab:hardened"
+          format: "table"
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
+          ignore-unfixed: true
+          exit-code: "0"

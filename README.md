@@ -56,9 +56,28 @@ DevSecOps lab demonstrating hard-coded secret detection, custom Gitleaks rules, 
 
 [View Project](secrets-dependency-scanning/)
 
+
+### Container Vulnerability Scanning & Remediation
+
+Hands-on container security lab demonstrating Docker image vulnerability scanning, CVE analysis, base-image and dependency remediation, non-root hardening, and before-and-after validation with Docker Scout.
+
+**Skills demonstrated:**
+
+- Docker
+- Container security
+- Docker Scout
+- Vulnerability management
+- CVE analysis
+- Dependency remediation
+- Python / Flask
+- Linux
+- Least privilege
+- DevSecOps
+
+[View Project](container-vulnerability-remediation/)
+
 ## Planned Projects
 
-- Container Vulnerability Scanning and Remediation
 - Threat Modeling with STRIDE
 - Security Log Analysis
 - Secure CI/CD DevSecOps Pipeline
