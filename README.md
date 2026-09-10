@@ -95,9 +95,31 @@ Threat modeling project applying the STRIDE methodology to a simulated enterpris
 
 [View Project](threat-modeling-stride/)
 
+
+### Security Log Analysis
+
+Simulated incident investigation of a compromised Linux web server using authentication, process execution, and network telemetry. The project correlates multiple log sources to reconstruct attacker activity, identify indicators of compromise, assess business impact, map behavior to MITRE ATT&CK, and develop detection opportunities.
+
+**Skills demonstrated:**
+
+- Security log analysis
+- Incident investigation
+- Linux security
+- Authentication analysis
+- Process and network telemetry
+- Event correlation
+- Timeline reconstruction
+- Indicators of compromise
+- MITRE ATT&CK
+- Detection engineering
+- Python log analysis
+- Incident response
+- Security impact assessment
+
+[View Project](security-log-analysis/)
+
 ## Planned Projects
 
-- Security Log Analysis
 - Secure CI/CD DevSecOps Pipeline
 - Secure Azure Infrastructure with Terraform
 - Azure Security Monitoring and Incident Response
