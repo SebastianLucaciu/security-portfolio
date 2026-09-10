@@ -2,7 +2,7 @@
 
 ![Linux](https://img.shields.io/badge/Linux-Security-blue?logo=linux)
 ![Python](https://img.shields.io/badge/Python-Log%20Analysis-blue?logo=python)
-![MITRE ATT%26CK](https://img.shields.io/badge/MITRE-ATT%26CK-red)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-red)
 ![Incident Response](https://img.shields.io/badge/Incident-Response-orange)
 ![Log Analysis](https://img.shields.io/badge/Security-Log%20Analysis-green)
 
@@ -58,6 +58,63 @@ The compromised account was then used to:
 7. Archive application configuration and environment data
 8. Exfiltrate the archive to `198.51.100.42`
 
+
+## Security & Business Impact
+
+The compromise represents more than an isolated unauthorized login. Once the attacker gained access to the server, the activity created several high-impact risks to the wider environment.
+
+### Credential and Secret Exposure
+
+Access to `/etc/shadow` exposed local password hashes, while discovery and collection of application `.env` and configuration files created the possibility that additional credentials, API keys, database connection strings, or service secrets were compromised.
+
+This means remediation cannot be limited to resetting the `sebastian` account. Any credentials or secrets stored on the host must be treated as potentially exposed and rotated.
+
+### Full Host Compromise
+
+The attacker executed a downloaded payload with root privileges.
+
+Root-level execution means the integrity of the server can no longer be trusted. An attacker with this access can modify system files, disable security controls, create users, alter logs, install additional tooling, and conceal malicious activity.
+
+The appropriate recovery action would be to isolate and rebuild the host from a trusted image rather than relying only on removal of observed malicious files.
+
+### Persistent Unauthorized Access
+
+The attacker created an `@reboot` cron entry that launches `/usr/local/bin/.svc`.
+
+This persistence mechanism allows malicious code to survive a reboot and provides continued access even after the original SSH session ends.
+
+### Sensitive Data Loss
+
+Application configuration and environment data were collected into `/tmp/appdata.tar.gz` and transferred to an external host.
+
+This creates a confirmed confidentiality impact and may expose application secrets or infrastructure credentials that could be reused against other systems.
+
+### Potential Lateral Movement
+
+If passwords, SSH credentials, service accounts, API tokens, or application secrets were reused elsewhere, the compromise could extend beyond `web01`.
+
+The incident therefore requires investigation of adjacent systems, authentication logs, reused credentials, and any services accessible using secrets stored on the compromised server.
+
+### Operational Impact
+
+Because both privileged access and persistence were achieved, the server must be considered untrusted.
+
+Likely incident-response actions include:
+
+- Immediate host isolation
+- Credential and secret rotation
+- Blocking identified malicious infrastructure
+- Investigation of related systems and accounts
+- Restoration or rebuild from a trusted image
+- Validation of application and data integrity
+- Increased monitoring for recurrence
+
+### Overall Risk
+
+**Overall Severity: Critical**
+
+The combination of valid-account compromise, root-level execution, credential access, persistence, and confirmed data exfiltration represents a complete system compromise with potential impact beyond the affected host.
+
 ## Log Sources
 
 ### Authentication Logs
@@ -111,7 +168,7 @@ Contains:
 
 Full findings are documented in:
 
-`analysis/investigation.md`
+[View Full Investigation](analysis/investigation.md)
 
 
 <details>
@@ -158,7 +215,7 @@ Observed attacker behavior was mapped to MITRE ATT&CK techniques including:
 
 See:
 
-`analysis/mitre-attack-mapping.md`
+[View MITRE ATT&CK Mapping](analysis/mitre-attack-mapping.md)
 
 ## Detection Engineering
 
@@ -172,7 +229,7 @@ The project includes practical detection opportunities for:
 
 See:
 
-`detections/linux-detections.md`
+[View Detection Opportunities](detections/linux-detections.md)
 
 
 <details>
