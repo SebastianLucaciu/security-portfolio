@@ -1,0 +1,133 @@
+system:
+  name: Cloud-Connected Customer Portal
+  description: >
+    A public web application that allows customers to authenticate,
+    view account data, upload documents, and perform account actions.
+    Administrative users access a separate admin interface.
+
+components:
+  - id: user_browser
+    name: Customer Browser
+    type: external_entity
+    zone: internet
+
+  - id: admin_browser
+    name: Administrator Browser
+    type: external_entity
+    zone: internet
+
+  - id: web_frontend
+    name: Web Frontend
+    type: process
+    zone: application
+    exposure: public
+
+  - id: auth_service
+    name: Authentication Service
+    type: process
+    zone: application
+    exposure: public
+
+  - id: api_backend
+    name: Application API
+    type: process
+    zone: application
+    exposure: internal
+
+  - id: database
+    name: Customer Database
+    type: data_store
+    zone: data
+    exposure: private
+
+  - id: object_storage
+    name: Document Storage
+    type: data_store
+    zone: data
+    exposure: private
+
+  - id: admin_portal
+    name: Admin Portal
+    type: process
+    zone: application
+    exposure: restricted
+
+  - id: logging_service
+    name: Central Logging / SIEM
+    type: process
+    zone: monitoring
+    exposure: private
+
+trust_boundaries:
+  - id: tb1
+    name: Internet to Application Boundary
+    separates:
+      - internet
+      - application
+
+  - id: tb2
+    name: Application to Data Boundary
+    separates:
+      - application
+      - data
+
+  - id: tb3
+    name: Application to Monitoring Boundary
+    separates:
+      - application
+      - monitoring
+
+data_flows:
+  - id: df1
+    source: user_browser
+    destination: web_frontend
+    protocol: HTTPS
+    data: Session cookies, account requests, uploaded files
+
+  - id: df2
+    source: user_browser
+    destination: auth_service
+    protocol: HTTPS
+    data: Credentials, authentication tokens
+
+  - id: df3
+    source: web_frontend
+    destination: api_backend
+    protocol: HTTPS
+    data: Authenticated API requests
+
+  - id: df4
+    source: api_backend
+    destination: database
+    protocol: TLS
+    data: Customer account data
+
+  - id: df5
+    source: api_backend
+    destination: object_storage
+    protocol: HTTPS
+    data: Customer documents
+
+  - id: df6
+    source: admin_browser
+    destination: admin_portal
+    protocol: HTTPS
+    data: Administrative requests
+
+  - id: df7
+    source: admin_portal
+    destination: api_backend
+    protocol: HTTPS
+    data: Privileged API requests
+
+  - id: df8
+    source: web_frontend
+    destination: logging_service
+    protocol: TLS
+    data: Application and security logs
+
+  - id: df9
+    source: api_backend
+    destination: logging_service
+    protocol: TLS
+    data: API, authentication, and audit logs
