@@ -76,9 +76,27 @@ Hands-on container security lab demonstrating Docker image vulnerability scannin
 
 [View Project](container-vulnerability-remediation/)
 
+### STRIDE Threat Modeling
+
+Threat modeling project applying the STRIDE methodology to a simulated enterprise application architecture. The project identifies threats across authentication, APIs, data flows, storage, administrative access, and trust boundaries, then documents risk severity, mitigations, and residual risk.
+
+**Skills demonstrated:**
+
+- Threat modeling
+- STRIDE methodology
+- Security architecture analysis
+- Data flow diagrams
+- Trust boundary analysis
+- Authentication and authorization risks
+- Threat identification and prioritization
+- Security control selection
+- Risk assessment
+- Defense in depth
+
+[View Project](threat-modeling-stride/)
+
 ## Planned Projects
 
-- Threat Modeling with STRIDE
 - Security Log Analysis
 - Secure CI/CD DevSecOps Pipeline
 - Secure Azure Infrastructure with Terraform
