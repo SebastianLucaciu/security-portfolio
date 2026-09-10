@@ -1,7 +1,7 @@
 # Attack Flow
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[External Attacker<br>203.0.113.77]
     B[SSH Password Attempts]
     C[Successful Login<br>sebastian]
