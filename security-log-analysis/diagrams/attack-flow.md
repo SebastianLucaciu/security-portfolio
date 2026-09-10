@@ -10,7 +10,7 @@ flowchart LR
     F[Credential Access<br>/etc/shadow]
     G[Payload Download<br>update.sh]
     H[Root Execution]
-    I[Persistence<br>@reboot cron]
+    I["Persistence<br/>@reboot cron"]
     J[Data Staging<br>appdata.tar.gz]
     K[Exfiltration<br>198.51.100.42]
 
