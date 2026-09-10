@@ -1,0 +1,30 @@
+Sep  9 08:03:14 web01 sshd[1132]: Accepted publickey for deploy from 10.10.20.15 port 51244 ssh2
+Sep  9 08:03:14 web01 sshd[1132]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Sep  9 08:17:42 web01 sudo: deploy : TTY=pts/0 ; PWD=/var/www/app ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep  9 08:17:42 web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by deploy(uid=1001)
+Sep  9 08:17:43 web01 sudo: pam_unix(sudo:session): session closed for user root
+Sep  9 09:12:01 web01 sshd[1488]: Failed password for invalid user admin from 203.0.113.77 port 44918 ssh2
+Sep  9 09:12:04 web01 sshd[1488]: Failed password for invalid user admin from 203.0.113.77 port 44918 ssh2
+Sep  9 09:12:07 web01 sshd[1488]: Failed password for invalid user admin from 203.0.113.77 port 44918 ssh2
+Sep  9 09:12:11 web01 sshd[1488]: Connection closed by invalid user admin 203.0.113.77 port 44918 [preauth]
+Sep  9 09:18:23 web01 sshd[1511]: Failed password for root from 203.0.113.77 port 45702 ssh2
+Sep  9 09:18:26 web01 sshd[1511]: Failed password for root from 203.0.113.77 port 45702 ssh2
+Sep  9 09:18:29 web01 sshd[1511]: Failed password for root from 203.0.113.77 port 45702 ssh2
+Sep  9 09:18:32 web01 sshd[1511]: Failed password for root from 203.0.113.77 port 45702 ssh2
+Sep  9 09:19:02 web01 sshd[1517]: Failed password for sebastian from 203.0.113.77 port 45811 ssh2
+Sep  9 09:19:05 web01 sshd[1517]: Failed password for sebastian from 203.0.113.77 port 45811 ssh2
+Sep  9 09:19:08 web01 sshd[1517]: Failed password for sebastian from 203.0.113.77 port 45811 ssh2
+Sep  9 09:19:46 web01 sshd[1524]: Accepted password for sebastian from 203.0.113.77 port 45922 ssh2
+Sep  9 09:19:46 web01 sshd[1524]: pam_unix(sshd:session): session opened for user sebastian(uid=1002) by (uid=0)
+Sep  9 09:21:10 web01 sudo: sebastian : TTY=pts/1 ; PWD=/home/sebastian ; USER=root ; COMMAND=/usr/bin/id
+Sep  9 09:21:10 web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sebastian(uid=1002)
+Sep  9 09:21:10 web01 sudo: pam_unix(sudo:session): session closed for user root
+Sep  9 09:22:31 web01 sudo: sebastian : TTY=pts/1 ; PWD=/home/sebastian ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Sep  9 09:22:31 web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sebastian(uid=1002)
+Sep  9 09:22:31 web01 sudo: pam_unix(sudo:session): session closed for user root
+Sep  9 09:24:18 web01 sudo: sebastian : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/bash /tmp/update.sh
+Sep  9 09:24:18 web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sebastian(uid=1002)
+Sep  9 09:24:19 web01 sudo: pam_unix(sudo:session): session closed for user root
+Sep  9 09:27:44 web01 sshd[1524]: pam_unix(sshd:session): session closed for user sebastian
+Sep  9 10:02:07 web01 sshd[1771]: Accepted publickey for deploy from 10.10.20.15 port 51877 ssh2
+Sep  9 10:02:07 web01 sshd[1771]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)

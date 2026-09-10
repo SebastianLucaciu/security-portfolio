@@ -1,0 +1,12 @@
+2026-09-09T08:03:14 src=10.10.20.15 dst=10.10.10.25 spt=51244 dpt=22 proto=TCP action=ALLOW bytes_out=18421 bytes_in=22033
+2026-09-09T08:15:41 src=10.10.10.25 dst=192.30.255.113 spt=45188 dpt=443 proto=TCP action=ALLOW bytes_out=4862 bytes_in=18231
+2026-09-09T09:12:01 src=203.0.113.77 dst=10.10.10.25 spt=44918 dpt=22 proto=TCP action=ALLOW bytes_out=1328 bytes_in=1811
+2026-09-09T09:18:23 src=203.0.113.77 dst=10.10.10.25 spt=45702 dpt=22 proto=TCP action=ALLOW bytes_out=1492 bytes_in=2077
+2026-09-09T09:19:02 src=203.0.113.77 dst=10.10.10.25 spt=45811 dpt=22 proto=TCP action=ALLOW bytes_out=1299 bytes_in=1934
+2026-09-09T09:19:46 src=203.0.113.77 dst=10.10.10.25 spt=45922 dpt=22 proto=TCP action=ALLOW bytes_out=8842 bytes_in=9177
+2026-09-09T09:23:02 src=10.10.10.25 dst=198.51.100.42 spt=55121 dpt=80 proto=TCP action=ALLOW bytes_out=801 bytes_in=4221
+2026-09-09T09:24:29 src=10.10.10.25 dst=198.51.100.42 spt=55309 dpt=443 proto=TCP action=ALLOW bytes_out=1198 bytes_in=3884
+2026-09-09T09:24:59 src=10.10.10.25 dst=198.51.100.42 spt=55322 dpt=443 proto=TCP action=ALLOW bytes_out=824 bytes_in=774
+2026-09-09T09:25:29 src=10.10.10.25 dst=198.51.100.42 spt=55361 dpt=443 proto=TCP action=ALLOW bytes_out=817 bytes_in=769
+2026-09-09T09:26:31 src=10.10.10.25 dst=198.51.100.42 spt=55418 dpt=80 proto=TCP action=ALLOW bytes_out=184402 bytes_in=921
+2026-09-09T10:02:07 src=10.10.20.15 dst=10.10.10.25 spt=51877 dpt=22 proto=TCP action=ALLOW bytes_out=6229 bytes_in=7301

